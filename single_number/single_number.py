@@ -6,16 +6,17 @@ Returns: an integer
 
 def single_number(arr):
     # Your code here
-    arr.sort()
-    # print(arr)
-    if len(arr) > 2:
-        if arr[0] == arr[1]:
-            arr.pop()
-            arr.pop()
-            single_number(arr)
+    if arr[0] == arr[1]:
+        arr.pop()
+        arr.pop()
+    if arr[0] != arr[1]:
+        if arr[0] + 1 != arr[2]:
+            return arr[1]
+            print(f'arr[1]: {arr[1]}')
         else:
-            print(arr[0])
-            print(arr[1])
+            print(f'arr[0]: {arr[0]}')
+            return arr[0]
+    single_number(arr)
 
 
 if __name__ == '__main__':
