@@ -4,19 +4,43 @@ Returns: an integer
 '''
 
 
-def single_number(arr):
+def single_number(arr, returnMe=None):
     # Your code here
-    if arr[0] == arr[1]:
+    arr.sort()
+    # if arr[0] == arr[1]:
+    #     arr.pop()
+    #     arr.pop()
+    #     single_number(arr)
+    # if arr[0] != arr[1]:
+    # if arr[0] + 1 != arr[2]:
+    #     return arr[1]
+    #     print(f'arr[1]: {arr[1]}')
+    # else:
+    #     print(f'arr[0]: {arr[0]}')
+    #     return arr[0]
+    # single_number(arr)
+    # if arr[0] + 1 != arr[2]:
+    #     print(arr[0])
+    #     print(arr[1])
+    #     print(arr[2])
+    #     print(arr[3])
+    #     return
+    if arr[-1] == arr[-2]:
         arr.pop()
         arr.pop()
-    if arr[0] != arr[1]:
-        if arr[0] + 1 != arr[2]:
-            return arr[1]
-            print(f'arr[1]: {arr[1]}')
+        return single_number(arr)
+    else:
+        if arr[-1] - 1 != arr[-3]:
+            returnMe = arr[-2]
+            return returnMe
+            print(arr[-1])
+            print(arr[-2])
+            print(arr[-3])
+            print(arr[-4])
         else:
-            print(f'arr[0]: {arr[0]}')
-            return arr[0]
-    single_number(arr)
+            print('flip it')
+            returnMe = arr[-1]
+            return returnMe
 
 
 if __name__ == '__main__':
