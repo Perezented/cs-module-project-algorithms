@@ -33,12 +33,7 @@ def single_number(arr, returnMe=None):
         if arr[-1] - 1 != arr[-3]:
             returnMe = arr[-2]
             return returnMe
-            print(arr[-1])
-            print(arr[-2])
-            print(arr[-3])
-            print(arr[-4])
         else:
-            print('flip it')
             returnMe = arr[-1]
             return returnMe
 
